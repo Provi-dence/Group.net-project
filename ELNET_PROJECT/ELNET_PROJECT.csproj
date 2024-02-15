@@ -126,6 +126,10 @@
     <Content Include="Global.asax" />
     <Content Include="images\bike-icon.png" />
     <Content Include="images\bike.png" />
+    <Content Include="images\carousel-1.jpg" />
+    <Content Include="images\carousel-2.png" />
+    <Content Include="images\carousel-3.jpg" />
+    <Content Include="images\carousel-4.jpg" />
     <Content Include="images\facebook.png" />
     <Content Include="images\instagram-live.png" />
     <Content Include="images\logo.jpg" />

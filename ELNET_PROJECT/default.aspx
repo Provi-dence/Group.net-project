@@ -2,20 +2,20 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <div class="container-fluid"> <!-- Use container-fluid class -->
-    <div class="mt-4"> <!-- Add padding to the carousel -->
+    <div class="mt-3"> <!-- Add padding to the carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/bike.png" alt="First slide" style="max-height: 700px;">
+                    <img class="d-block w-100" src="images/carousel-1.jpg" alt="First slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/run.png" alt="Second slide" style="max-height: 700px;">
+                    <img class="d-block w-100" src="images/carousel-2.png" alt="Second slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/swim.png" alt="Third slide" style="max-height: 700px;">
+                    <img class="d-block w-100" src="images/carousel-3.jpg" alt="Third slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/marathon.jpg" alt="Fourth Slide" style="max-height: 700px;">
+                    <img class="d-block w-100" src="images/carousel-4.jpg" alt="Fourth Slide" style="max-height: 500px;">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
