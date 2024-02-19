@@ -138,12 +138,19 @@
     <Content Include="images\online-registration.png" />
     <Content Include="images\pic1.jpg" />
     <Content Include="images\pic2.jpg" />
+    <Content Include="images\run-cardview.jpg" />
     <Content Include="images\run-icon.png" />
     <Content Include="images\run.png" />
+    <Content Include="images\run1-cardview.jpg" />
+    <Content Include="images\run2-cardview.jpg" />
+    <Content Include="images\run3-cardview.jpg" />
+    <Content Include="images\run4-cardview.jpg" />
+    <Content Include="images\run5-cardview.png" />
     <Content Include="images\store.png" />
     <Content Include="images\swim-icon.png" />
     <Content Include="images\swim.png" />
     <Content Include="images\ultramarathon-icon.png" />
+    <Content Include="Running.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -233,6 +240,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Running.aspx.cs">
+      <DependentUpon>Running.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Running.aspx.designer.cs">
+      <DependentUpon>Running.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
