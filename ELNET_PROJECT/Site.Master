@@ -1,112 +1,115 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ELNET_PROJECT.SiteMaster" %>
+﻿    <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ELNET_PROJECT.SiteMaster" %>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
-<html lang="en">
-<head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <html lang="en">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%: Page.Title %> - My ASP.NET Application</title>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/modernizr") %>
+        </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <style>
-        .navbar-nav.ml-auto {
-            margin-left: auto !important;
-        }
-    </style>
-</head>
-<body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
+        <style>
+            .navbar-nav.ml-auto {
+                margin-left: auto !important;
+            }
+            .navbar-dark .navbar-brand {
+                color: #ffffff; /* Set the color of the brand text */
+            }
+        </style>
+    </head>
+    <body>
+        <form runat="server">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                    <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
 
-       <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-    <div class="container">
-        <!-- Add an image tag for your logo -->
-        <a class="navbar-brand" runat="server" href="~/">
-            <img src="images/logo.jpg" alt="Your Logo" style="max-height: 40px; max-width: 150px;" />
-            <!-- Adjust the max-height and max-width as per your logo's dimensions -->
-             HOTEL BOOKING
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
-            </ul>
+           <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-white">
+        <div class="container">
+            <!-- Add an image tag for your logo -->
+           <a class="navbar-brand" runat="server" href="~/">
+        <img src="images/logonamo.png" alt="Your Logo" style="max-height: 70px; max-width: 500px;" />
+        <!-- Adjust the max-height and max-width as per your logo's dimensions -->
+            </a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/About">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/Contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <div > 
-        <div >
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-
-
-  <footer class="text-center bg-light"> <!-- Added text-center class to center the content -->
-    <div class="row">
-        <div class="col-md-4 offset-md-4"> <!-- Added offset-md-4 to center the column -->
-            <!-- Add your logo -->
-            <img src="images/logo.jpg" alt="Footer Logo" style="max-width: 150px;">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <!-- Add link to your official page with an icon -->
-             <p><a href="https://www.yourofficialpage.com"><img src="images/mail.png" alt="Footer logo" style="max-width: 30px;" /> RunWithMe Facebook Page</a></p>
-        </div>
-        <div class="col-md-4">
-            <!-- Add link to your support page with an icon -->
-            <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
-        </div>
-         <div class="col-md-4">
-            <!-- Add link to your support page with an icon -->
-            <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
-        </div>
-    </div>
-    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-</footer>
+        <div > 
+            <div >
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
 
 
+      <footer class="text-center bg-light"> <!-- Added text-center class to center the content -->
+        <div class="row">
+            <div class="col-md-4 offset-md-4"> <!-- Added offset-md-4 to center the column -->
+                <!-- Add your logo -->
+                <img src="images/logonamo.png" alt="Footer Logo" style="max-width: 150px;">
+            </div>
         </div>
-    </div>
-    </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
-</body>
-</html>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Add link to your official page with an icon -->
+                 <p><a href="https://www.yourofficialpage.com"><img src="images/mail.png" alt="Footer logo" style="max-width: 30px;" /> RunWithMe Facebook Page</a></p>
+            </div>
+            <div class="col-md-4">
+                <!-- Add link to your support page with an icon -->
+                <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
+            </div>
+             <div class="col-md-4">
+                <!-- Add link to your support page with an icon -->
+                <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
+            </div>
+        </div>
+        <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+    </footer>
+
+
+            </div>
+        </div>
+        </form>
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+        </asp:PlaceHolder>
+    </body>
+    </html>

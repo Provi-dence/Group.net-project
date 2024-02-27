@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Biking.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -126,13 +127,22 @@
     <Content Include="Global.asax" />
     <Content Include="images\bike-icon.png" />
     <Content Include="images\bike.png" />
+    <Content Include="images\biking1-event.jpg" />
+    <Content Include="images\biking2-event.png" />
+    <Content Include="images\biking3-event.png" />
+    <Content Include="images\biking4-event.png" />
     <Content Include="images\carousel-1.jpg" />
     <Content Include="images\carousel-2.png" />
     <Content Include="images\carousel-3.jpg" />
     <Content Include="images\carousel-4.jpg" />
+    <Content Include="images\carousel1_namo.png" />
+    <Content Include="images\carousel2_namo.png" />
+    <Content Include="images\carousel3_namo.png" />
+    <Content Include="images\carousel4_namo.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\instagram-live.png" />
     <Content Include="images\logo.jpg" />
+    <Content Include="images\logonamo.png" />
     <Content Include="images\mail.png" />
     <Content Include="images\marathon.jpg" />
     <Content Include="images\online-registration.png" />
@@ -222,6 +232,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Biking.aspx.cs">
+      <DependentUpon>Biking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Biking.aspx.designer.cs">
+      <DependentUpon>Biking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -3,19 +3,19 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <div class="container-fluid"> <!-- Use container-fluid class -->
     <div class="mt-3"> <!-- Add padding to the carousel -->
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/carousel-1.jpg" alt="First slide" style="max-height: 500px;">
+                    <img class="d-block w-100" src="images/carousel1_namo.png" alt="First slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/carousel-2.png" alt="Second slide" style="max-height: 500px;">
+                    <img class="d-block w-100" src="images/carousel2_namo.png" alt="Second slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/carousel-3.jpg" alt="Third slide" style="max-height: 500px;">
+                    <img class="d-block w-100" src="images/carousel3_namo.png" alt="Third slide" style="max-height: 500px;">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/carousel-4.jpg" alt="Fourth Slide" style="max-height: 500px;">
+                    <img class="d-block w-100" src="images/carousel4_namo.png" alt="Fourth Slide" style="max-height: 500px;">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Services Section -->
-        <div class="bg-light p-4 mt-4"> <!-- Add a div with gray background and padding -->
+        <div style="background-color:white; padding: 4px; margin-top: 4px;"> <!-- Add a div with gray background and padding -->
     <div class="row mt-5">
         <div class="col text-center">
             <h2><b>SERVICES</b></h2>
@@ -55,13 +55,14 @@
     </div>
 </div>
 
-
+        <div style="background-color:darkgray; padding: 4px; margin-top: 4px;">
         <div class="py-5">
     <div class="col text-center">
         <h2>EVENT CATEGORIES</h2>
         <br />
         <br />
     </div>
+            </div>
   <div class="row justify-content-center"> <!-- Align the categories horizontally -->
     <div class="col-md-3 text-center mb-3">
         <a href="Running.aspx" style="text-decoration: none; color: blueviolet;">
@@ -70,7 +71,7 @@
         </a>
     </div>
     <div class="col-md-3 text-center mb-3">
-        <a href="Bike.aspx" style="text-decoration: none; color: blueviolet;">
+        <a href="Biking.aspx" style="text-decoration: none; color: blueviolet;">
             <img src="images/bike-icon.png" alt="Bike Icon" style="max-width: 50px;"><br>
             BIKE
         </a>
