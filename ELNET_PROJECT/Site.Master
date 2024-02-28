@@ -20,6 +20,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
         <style>
             .navbar-nav.ml-auto {
@@ -51,27 +53,28 @@
                 </Scripts>
             </asp:ScriptManager>
 
-           <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-white">
-        <div class="container">
-            <!-- Add an image tag for your logo -->
-           <a class="navbar-brand" runat="server" href="~/">
-        <img src="images/logonamo.png" alt="Your Logo" style="max-height: 70px; max-width: 500px;" />
-        <!-- Adjust the max-height and max-width as per your logo's dimensions -->
-            </a>
+           <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-white container-fluid">
+            <div class="container">
+                <!-- Add an image tag for your logo -->
+               <a class="navbar-brand" runat="server" href="~/">
+            <img src="images/logonamo.png" alt="Your Logo" style="max-height: 70px; max-width: 500px;" />
+            <!-- Adjust the max-height and max-width as per your logo's dimensions -->
+                </a>
 
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/About">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/Contact">Contact</a></li>
-                </ul>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/About">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" runat="server" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Events</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
         <div > 
             <div >
@@ -79,33 +82,71 @@
                 </asp:ContentPlaceHolder>
                 <hr />
 
-
-      <footer class="text-center bg-light"> <!-- Added text-center class to center the content -->
-        <div class="row">
-            <div class="col-md-4 offset-md-4"> <!-- Added offset-md-4 to center the column -->
-                <!-- Add your logo -->
-                <img src="images/logonamo.png" alt="Footer Logo" style="max-width: 150px;">
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Events</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <div class="row justify-content-center">
+                        <!-- Align the categories horizontally -->
+                        <div class="col-md-3 text-center">
+                            <a href="Running.aspx" style="text-decoration: none; color: blueviolet;">
+                                <img src="images/run-icon.png" alt="Running Icon" style="max-width: 50px;"><br>
+                                RUNNING
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center ">
+                            <a href="Biking.aspx" style="text-decoration: none; color: blueviolet;">
+                                <img src="images/bike-icon.png" alt="Bike Icon" style="max-width: 50px;"><br>
+                                BIKE
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center ">
+                            <a href="Swim.aspx" style="text-decoration: none; color: blueviolet;">
+                                <img src="images/swim-icon.png" alt="Swim Icon" style="max-width: 50px;"><br>
+                                SWIM
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center ">
+                            <a href="Ultramarathon.aspx" style="text-decoration: none; color: blueviolet;">
+                                <img src="images/ultramarathon-icon.png" alt="Ultramarathon Icon" style="max-width: 50px;"><br>
+                                ULTRAMARATHON
+                            </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <!-- Add link to your official page with an icon -->
-                 <p><a href="https://www.yourofficialpage.com"><img src="images/mail.png" alt="Footer logo" style="max-width: 30px;" /> RunWithMe Facebook Page</a></p>
-            </div>
-            <div class="col-md-4">
-                <!-- Add link to your support page with an icon -->
-                <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
-            </div>
-             <div class="col-md-4">
-                <!-- Add link to your support page with an icon -->
-                <p><a href="https://www.supportpage.com"><img src="images/facebook.png" alt="Footer logo" style="max-width: 30px;" /> support@runwithme.com</a></p>
-            </div>
-        </div>
-        <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-    </footer>
-
-
-            </div>
+              <footer class="bg-white text-dark py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/logonamo.png" alt="Footer Logo" class="img-fluid mb-4" style="max-width: 150px;">
+                            <p class="text-muted">RunWithMe is a platform that supports athletes, racers, and events in creating their ultimate sports experience.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none text-dark">Home</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">About</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Events</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Contact Us</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-geo-alt-fill"></i> 123 Street, City, Country</li>
+                                <li><i class="bi bi-telephone-fill"></i> +123 456 7890</li>
+                                <li><i class="bi bi-envelope-fill"></i> info@runwithme.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <p class="text-center">&copy; <%: DateTime.Now.Year %> RunWithMe. All Rights Reserved.</p>
+                </div>
+            </footer>
         </div>
         </form>
         <asp:PlaceHolder runat="server">
