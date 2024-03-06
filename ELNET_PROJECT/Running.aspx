@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title">5k run & walk</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="RunningDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=5k Run" class="btn btn-primary" data-event="5k Run">Join Event</a>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Run Rio 2023</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="BikingDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=Run Rio 2023" class="btn btn-primary" data-event="Run Rio 2023">Join Event</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <div class="card-body">
                         <h5 class="card-title">39th Milo</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="SwimmingDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=39th Milo" class="btn btn-primary" data-event="39th Milo">Join Event</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Run baby Run!</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="HikingDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=Run baby Run!" class="btn btn-primary" data-event="Run baby Run!">Join Event</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Sm2Sm 2023</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="MarathonDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=Sm2Sm 2023" class="btn btn-primary" data-event="Sm2Sm 2023">Join Event</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Waterfront Run 2024</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <a href="JoggingDetails.aspx" class="btn btn-primary">Join Event</a>
+                        <a href="RegistrationForm.aspx?event=Waterfront Run 2024" class="btn btn-primary" data-event="Waterfront Run 2024">Join Event</a>
                     </div>
                 </div>
             </div>
