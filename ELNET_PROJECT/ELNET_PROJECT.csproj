@@ -103,11 +103,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminPanel.aspx" />
     <Content Include="App_Data\ELNET_PROJECT.mdf" />
     <Content Include="App_Data\ELNET_PROJECT_log.ldf">
       <DependentUpon>ELNET_PROJECT.mdf</DependentUpon>
     </Content>
     <Content Include="Biking.aspx" />
+    <Content Include="confirmationPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -164,6 +166,7 @@
     <Content Include="images\swim-icon.png" />
     <Content Include="images\swim.png" />
     <Content Include="images\ultramarathon-icon.png" />
+    <Content Include="Login.aspx" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Running.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -229,6 +232,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -244,6 +254,13 @@
     </Compile>
     <Compile Include="Biking.aspx.designer.cs">
       <DependentUpon>Biking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirmationPage.aspx.cs">
+      <DependentUpon>confirmationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="confirmationPage.aspx.designer.cs">
+      <DependentUpon>confirmationPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -261,6 +278,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.aspx.cs">

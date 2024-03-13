@@ -1,49 +1,48 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="ELNET_PROJECT.Contact" %>
+﻿<%@ Page Title="Submit Your Event" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="ELNET_PROJECT.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <section class="contact-section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto text-center">
-                    <h2 class="section-heading mb-5">Contact Us</h2>
+                    <h2 class="section-heading mb-5">Submit Your Event</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <div class="card shadow">
                         <div class="card-body">
-                            <p class="lead mb-4">Feel free to reach out to us with any questions or feedback. We would love to hear from you!</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="fas fa-map-marker-alt fa-fw me-3"></i> One Microsoft Way, Redmond, WA 98052-6399</li>
-                                <li class="mb-3"><i class="fas fa-phone fa-fw me-3"></i> 425.555.0100</li>
-                                <li class="mb-3"><i class="fas fa-envelope fa-fw me-3"></i> <a href="mailto:support@example.com">support@example.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mx-auto">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <div id="eventForm">
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name." />
-                                    <label for="name">Your Name *</label>
-                                    <div class="invalid-feedback">Please enter your name.</div>
+                                    <asp:TextBox ID="eventName" runat="server" CssClass="form-control" placeholder="Event Name" Required="true"></asp:TextBox>
+                                    <asp:Label ID="eventNameLabel" runat="server" AssociatedControlID="eventName" Text="Event Name *" CssClass="form-label"></asp:Label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" type="email" placeholder="Your Email Address" required="required" data-validation-required-message="Please enter your email address." />
-                                    <label for="email">Your Email Address *</label>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    <asp:TextBox ID="eventDescription" runat="server" CssClass="form-control" TextMode="MultiLine" placeholder="Event Description" Required="true" Rows="3"></asp:TextBox>
+                                    <asp:Label ID="eventDescriptionLabel" runat="server" AssociatedControlID="eventDescription" Text="Event Description *" CssClass="form-label"></asp:Label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" placeholder="Your Message" style="height: 10rem" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                    <label for="message">Your Message *</label>
-                                    <div class="invalid-feedback">Please enter your message.</div>
+                                    <asp:TextBox ID="organizerName" runat="server" CssClass="form-control" placeholder="Your Name" Required="true"></asp:TextBox>
+                                    <asp:Label ID="organizerNameLabel" runat="server" AssociatedControlID="organizerName" Text="Your Name *" CssClass="form-label"></asp:Label>
                                 </div>
+                                <div class="form-floating mb-3">
+                                    <asp:TextBox ID="organizerEmail" runat="server" CssClass="form-control" placeholder="Your Email Address" Required="true" TextMode="Email"></asp:TextBox>
+                                    <asp:Label ID="organizerEmailLabel" runat="server" AssociatedControlID="organizerEmail" Text="Your Email Address *" CssClass="form-label"></asp:Label>
+                                </div>
+                                <div class="input-group mb-3">
+                                <asp:DropDownList ID="eventCategories" runat="server" CssClass="form-select" Required="true">
+                                    <asp:ListItem Text="Select Event Category" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="RUNNING" Value="RUNNING"></asp:ListItem>
+                                    <asp:ListItem Text="BIKING" Value="BIKING"></asp:ListItem>
+                                    <asp:ListItem Text="SWIMMING" Value="SWIMMING"></asp:ListItem>
+                                    <asp:ListItem Text="ULTRAMARATHON" Value="ULTRAMARATHON"></asp:ListItem>
+                                </asp:DropDownList>
+                                <label class="input-group-text" for="eventCategories"><i class="fa fa-caret-down"></i></label>
+                            </div>
                                 <div class="text-center">
-                                    <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button>
+                                    <asp:Button ID="submitEventButton" runat="server" Text="Submit Event" CssClass="btn btn-primary btn-xl text-uppercase" OnClick="submitEvent_Click" />
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
